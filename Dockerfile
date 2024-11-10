@@ -1,8 +1,8 @@
 FROM centos:7
-MAINTAINER arunchincholi123@gmail.com
+LABEL maintainer="arunchincholi123@gmail.com"
 RUN yum install -y httpd \
- zip\
- unzip
+    zip \
+    unzip
 COPY photogenic.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip photogenic.zip
